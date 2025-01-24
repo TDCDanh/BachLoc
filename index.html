@@ -38,19 +38,31 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Đổ bóng khung */
         background-clip: padding-box; /* Đảm bảo viền không chồng lên chữ */
       }
-
-      .banner p {
-        background-color: rgb(255, 255, 255); /* Màu nền mờ cho chữ */
-        padding: 10px 20px; /* Khoảng cách xung quanh chữ */
-        border-radius: 10px; /* Bo góc nền */
+      .banner .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Lớp phủ mờ */
+      }
+      .text-box {
+        position: relative;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        padding: 10px 20px;
+        background: rgba(0, 0, 0, 0.6); /* Khung chữ mờ */
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Tạo đổ bóng */
       }
 
       .slogan {
-        background-color: #aed6f1; /* Màu xanh sáng */
+        background-color: #085588; /* Màu xanh sáng */
         padding: 15px;
         font-size: 18px;
         font-style: italic;
-        color: #000;
+        color: #f1f1f1;
       }
 
       /* Định dạng phần nội dung chính */
@@ -63,11 +75,19 @@
         text-align: center;
       }
 
+      .audio-center {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 20px; /* Thêm khoảng cách nếu cần */
+      }
+
       .box {
         background-color: #f9e79f; /* Màu vàng nhạt */
         border: 2px solid #e67e22; /* Màu cam đậm */
         padding: 30px;
         font-size: 16px;
+        border-radius: 50px;
       }
 
       /* Định dạng phần cuối trang */
@@ -89,53 +109,76 @@
           color: aliceblue;
         "
       >
-        Chào mừng đến với website của Bách và Lộc
+        <i> <b> Chào mừng đến với website của Bách và Lộc </b> </i>
       </p>
       <br />
       <div class="banner">
-        <b> Trang web lưu giữ kỉ niệm của Bách Lộc </b>
+        <b>
+          <div
+            class="text-box"
+            style="
+              font-size: 40px;
+              font-family: Verdana, Geneva, Tahoma, sans-serif;
+            "
+          >
+            Trang web lưu giữ kỉ niệm của Bách và Lộc
+          </div>
+        </b>
       </div>
       <div class="slogan">
         <br />
         <p
-          style="font-size: 25px; font-family: 'Times New Roman', Times, serif"
+          style="
+            font-size: 25px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+          "
         >
-          "Ước mơ tự nó vốn không phát sáng.
-          <br />Thứ phát sáng là chính bạn khi đang trên đường theo đuổi ước
-          mơ."
+          <b>
+            "Ước mơ tự nó vốn không phát sáng.
+            <br />
+            Thứ phát sáng là chính bạn khi đang trên đường theo đuổi ước mơ."
+          </b>
         </p>
         <br />
+      </div>
+      <div class="audio-center">
+        <audio controls>
+          <source src="9420b3a05cb54573bfc87b251051e237.mp3" type="audio/mp3" />
+        </audio>
       </div>
     </div>
 
     <!-- Phần nội dung chính -->
 
     <div class="main-content">
-      <div class="audio-center">
-        <audio controls>
-          <source src="9420b3a05cb54573bfc87b251051e237.mp3" type="audio/mp3" />
-        </audio>
-      </div>
-      <br />
-
       <div class="box">
         <!-- <img src="kết quả hsg.jpg" alt="" /> -->
         <img src="kết quả hsg.jpg" alt="hsg" width="500" height="300" />
         <br />
-        Kết quả kì thi học sinh giỏi cấp tỉnh! -_-
+        <br />
+
+        <b>
+          <div class="text-box">Kết quả kì thi học sinh giỏi cấp tỉnh! -_-</div>
+        </b>
       </div>
 
       <div class="box">
         <img src="cổ vũ.jpg" alt="hsg" width="400" height="300" />
         <br /><br />
-        19/01/2025,các bạn đi xem văn nghệ cổ vũ lớp 12A4
+        <b>
+          <div class="text-box">
+            19/01/2025,các bạn đi xem văn nghệ cổ vũ lớp 12A4
+          </div>
+        </b>
       </div>
 
       <div class="box">
         <img src="ảnh nhóm.jpg" alt="hsg" width="400" height="300" />
         <br />
         <br />
-        Kỉ niệm cuối năm lớp 11
+        <b>
+          <div class="text-box">Kỉ niệm cuối năm lớp 11</div>
+        </b>
       </div>
 
       <div class="box">
@@ -147,17 +190,23 @@
         />
         <br />
         <br />
-        Học sinh giỏi liên quân
+        <b>
+          <div class="text-box">Học sinh giỏi liên quân</div>
+        </b>
       </div>
     </div>
 
     <!-- Phần cuối trang -->
     <div class="footer">
-      :oo siuuuuuuuuuuuuuuuuuuu!!!!!!!!!!!!!
+      siuuuuuuuuuuuuuuuuuuu
       <br />
-      <a href="">locvo6645@gmail.com</a>
       <br />
-      <a href="">bachtrlai9@gamil.com</a>
+      <b> contact us: </b>
+      <br />
+      <br />
+      Lộc shadow: locvo6645@gmail.com
+      <br />
+      Bách tesla: bachtrlai9@gamil.com
     </div>
   </body>
 </html>
